@@ -26,6 +26,29 @@ We built several recommender systems, adopting a range of techniques including m
 
 A total of 9 broad topics were discovered after building a topic model based on the descriptions of the board games. This came in useful after we deployed the final recommender system in a web application using `Streamlit`. Users were given an option to diversify their already personalized recommendations based on the identified topics, allowing them to see a wider variety of board game recommendations. On top of that, many filtering options (such as by publication year, game complexity) were given to the user to further personalize their board game recommendations.
 
+## Deployment
+
+Constructing the four stages above as the main skeleton of the recommender system, it was deployed as a web application using `Streamlit`. 
+
+The web application has the following features:
+- User-friendly interface
+- List of popular board games already loaded for user to browse right away
+- Multi-selection input box for user to enter the board games he/she likes
+- Personalized recommendations based on user input (can be listed by frequency or popularity)
+- Option to show the board games as images
+- Option to diversify the recommendations based on different identified topics
+- Set of advanced filtering options to further personalize the recommendations
+
+![Recommender_web_app](./images/rec_web_app.png)
+
+## Conclusions
+
+Through this project, we gained many interesting insights on the board game genres and how they have evolved since the 20th century. Using data collected from BoardGameGeek (BGG), we were able to put together a recommender system utilizing matrix factorization, dimensionality reduction and even topic modelling techniques. The recommender system was built using a collaborative filtering function and a deep neural network with entity embeddings. Afterwhich, we optimize the user experience by providing several filtering settings and the option to diversify the game recommendations based on the 9 topics identified from the board game descriptions. This new recommender system would be a good platform for avid board gamers who seek personalized recommendations. We have high hopes of helping BGG to increase user retention, time spent on the website, and also bring in new users to the BGG community.
+
+In the process of putting together the aforementioned recommender system, many recommenders were built and evaluated upon. Although user-based collaborative filtering was useful for the initialization of our recommender, it was found to be less effective on its own as a recommender. Similarly, item-based collaborative filtering and content-based recommenders are also not optimal if used on its own, despite being more intuitive for our use case as compared to the user-based counterpart. Deep neural network recommenders were built using `tensorflow_recommenders`, which comprised query and candidate towers. Progressively exploring the retrieval and ranking methods of the tensorflow ecosystem, we managed to combine them to develop a feature-rich network trained by optimizing a balance of top-N accuracy and root-mean-squared error. Further fine-tuning left us with a network using a single 32-dimension embedding layer. The motivation to add the user-based collaborative filtering tool to the neural network was to alleviate the common issue of user cold-start in recommenders.
+
+Moving forward, the recommender system could be improved further if the weights of the model are constantly updated with new user ratings and board games. It would definitely ensure that the system is more relevant and up-to-date with current trends in the board game market. It is possible that the recommender could be better with more data from other major board game websites/forums as well. The only caveat is that the users from other websites may have developed distinctly different preferences. Providing game recommendations based on different community profiling may backfire and lead to increased user churn for BGG. We could also tap on the discussions among BGG users in the forum and deploy some Natural Language Processing techniques to develop more robust user profiles. With deeper understanding, we may be able to enhance our recommender system by providing more individualized game recommendations.
+
 ## Data
 
 ### Data Source
@@ -69,11 +92,3 @@ The data was scraped from [BoardGameGeek](https://boardgamegeek.com/), an online
 | complexity | Board game's average rating for how difficult the game is to understand, by the BGG community (On a scale of 1-5, the lower the rating, the easier the game is to understand). |
 | language_dependency | How language-dependent components (aside from the rules) are for those who do not speak the game published language (On a scale of 1-5, 5 means no necessary in-game text, 1 means unplayable in another language). |
 | _id | Board game's associated ID with other websites (like BGA, WikiData, etc.). |
-
-## Conclusions
-
-Through this project, we gained many interesting insights on the board game genres and how they have evolved since the 20th century. Using data collected from BoardGameGeek (BGG), we were able to put together a recommender system utilizing matrix factorization, dimensionality reduction and even topic modelling techniques. The recommender system was built using a collaborative filtering function and a deep neural network with entity embeddings. Afterwhich, we optimize the user experience by providing several filtering settings and the option to diversify the game recommendations based on the 9 topics identified from the board game descriptions. This new recommender system would be a good platform for avid board gamers who seek personalized recommendations. We have high hopes of helping BGG to increase user retention, time spent on the website, and also bring in new users to the BGG community.
-
-In the process of putting together the aforementioned recommender system, many recommenders were built and evaluated upon. Although user-based collaborative filtering was useful for the initialization of our recommender, it was found to be less effective on its own as a recommender. Similarly, item-based collaborative filtering and content-based recommenders are also not optimal if used on its own, despite being more intuitive for our use case as compared to the user-based counterpart. Deep neural network recommenders were built using `tensorflow_recommenders`, which comprised query and candidate towers. Progressively exploring the retrieval and ranking methods of the tensorflow ecosystem, we managed to combine them to develop a feature-rich network trained by optimizing a balance of top-N accuracy and root-mean-squared error. Further fine-tuning left us with a network using a single 32-dimension embedding layer. The motivation to add the user-based collaborative filtering tool to the neural network was to alleviate the common issue of user cold-start in recommenders.
-
-Moving forward, the recommender system could be improved further if the weights of the model are constantly updated with new user ratings and board games. It would definitely ensure that the system is more relevant and up-to-date with current trends in the board game market. It is possible that the recommender could be better with more data from other major board game websites/forums as well. The only caveat is that the users from other websites may have developed distinctly different preferences. Providing game recommendations based on different community profiling may backfire and lead to increased user churn for BGG. We could also tap on the discussions among BGG users in the forum and deploy some Natural Language Processing techniques to develop more robust user profiles. With deeper understanding, we may be able to enhance our recommender system by providing more individualized game recommendations.
