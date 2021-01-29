@@ -1,4 +1,4 @@
-# Capstone Project: Board Games Recommender
+# Board Games Recommender
 
 ### Riche Ngo, SG-DSI-18
 
