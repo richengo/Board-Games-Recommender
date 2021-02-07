@@ -1,6 +1,6 @@
 # Board Games Recommender
 
-### Riche Ngo, SG-DSI-18
+### Riche Ngo
 
 ## Introduction
 
