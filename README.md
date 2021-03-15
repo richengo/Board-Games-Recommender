@@ -1,7 +1,5 @@
 # Board Games Recommender
 
-### Riche Ngo
-
 ## Introduction
 
 [Board games](https://en.wikipedia.org/wiki/Board_game) are traditionally a subset of [tabletop games](https://en.wikipedia.org/wiki/Tabletop_game) that involve counters or pieces moved or placed on a pre-marked surface or board, according to a set of rules. While ancient board games like [Senet](https://en.wikipedia.org/wiki/Senet) and [Mehen](https://en.wikipedia.org/wiki/Mehen) existed when paper was invented, it was the 20th century that board games began to evolve dynamically in different directions. The two largest markets back then were the United States (US) and Germany, featuring two different broad categories of board games. In the US was where you could find [Ameritrash](https://en.wikipedia.org/wiki/Amerigame) games, devoted more towards [role-playing](https://en.wikipedia.org/wiki/Role-playing) games, often simulating warfare and adventure themes. On the other hand, [Eurogames](https://en.wikipedia.org/wiki/Eurogame) were developed by Germany, usually placing focus on the mechanics of the game and involving proper strategy. Several other board game genres have since appeared, such as [deckbuilders](https://en.wikipedia.org/wiki/Deck-building_game), [dexterity games](http://www.boardgamizer.com/mechanics/definition/dexterity), [roll-and-write games](http://sgl.la/blog/2018/4/27/what-is-a-roll-and-write-game), etc. In recent years, many board games comprise multiple game types, also taking elements of Ameritrash games while utilizing mechanics typical of Eurogames.
